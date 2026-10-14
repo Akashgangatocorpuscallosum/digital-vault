@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>স্মার্ট ইউটিলিটি ভল্ট | Smart Digital Utilities</title>
+    <script src="https://tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col">
+
+    <!-- Top Production Navigation -->
+    <nav class="bg-emerald-600 p-4 text-white shadow-md">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <h1 id="nav-title" class="font-bold text-xl tracking-tight">📁 ফ্রি ডিজিটাল ইউটিলিটি</h1>
+            <button id="lang-btn" onclick="toggleLanguage()" class="bg-emerald-800 px-4 py-1.5 rounded-lg text-sm font-semibold hover:bg-emerald-900 transition shadow-inner">
+                English / বাংলা
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Application Core -->
+    <main class="max-w-5xl mx-auto p-4 md:p-6 flex-grow w-full">
+        
+        <!-- Localized Voice Trust System -->
+        <div class="bg-white border-l-4 border-emerald-500 p-5 mb-8 rounded-r-xl shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div class="flex-grow">
+                <p id="welcome-text" class="font-medium text-emerald-950 text-base md:text-lg">স্বাগতম! নিচের যেকোনো একটি টুল বেছে নিন। আপনার ফাইলগুলি সম্পূর্ণ সুরক্ষিতভাবে আপনার ব্রাউজারে তৈরি করা হচ্ছে।</p>
+                <p id="sub-welcome" class="text-xs text-slate-400 mt-1">Safe Browser Sandbox Execution Environment.</p>
+            </div>
+            <button onclick="playGuidanceVoice()" class="bg-emerald-600 text-white font-semibold px-5 py-2.5 rounded-full text-sm flex items-center gap-2 hover:bg-emerald-700 transition shadow shrink-0">
+                📢 <span id="audio-btn-text">নির্দেশিকা শুনুন / Audio Guide</span>
+            </button>
+        </div>
+
+        <!-- 4 Core Tool Engine Grid Layout -->
+        <div id="vault-content" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Engine 1: PDF Compressor -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-lg mb-2 text-slate-900 flex items-center gap-2">📄 <span id="t1-title">Govt Exam PDF Resizer</span></h3>
+                    <p id="t1-desc" class="text-sm text-slate-500 mb-4">যেকোনো সরকারি ফর্মের জন্য আপনার PDF ফাইলটি ১০০KB-র নিচে ছোট করুন।</p>
+                </div>
+                <div class="mt-4">
+                    <input type="file" accept=".pdf" class="w-full text-xs text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-emerald-50 file:text-emerald-700 hover:file:bg-emerald-100 cursor-pointer"/>
+                    <button onclick="processToolExecution('PDF Document')" class="mt-4 w-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-2 rounded-xl transition text-sm">Process & Compress</button>
+                </div>
+            </div>
+
+            <!-- Engine 2: Resume / Bill Generator -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-lg mb-2 text-slate-900 flex items-center gap-2">✍️ <span id="t2-title">Instant BioData Builder</span></h3>
+                    <p id="t2-desc" class="text-sm text-slate-500 mb-4">খুব সহজে প্রিন্ট করার জন্য আপনার বায়োডাটা বা বিল তৈরি করুন।</p>
+                </div>
+                <div class="mt-4">
+                    <input type="text" id="user-name" placeholder="আপনার পুরো নাম লিখুন / Full Name" class="w-full border border-slate-200 p-2.5 rounded-xl text-sm mb-2 focus:outline-emerald-500"/>
+                    <button onclick="processToolExecution('BioData Profile')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-2 rounded-xl transition text-sm">Generate Document</button>
+                </div>
+            </div>
+
+            <!-- Engine 3: Tax & Local Interest Calculators -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-lg mb-2 text-slate-900 flex items-center gap-2">🧮 <span id="t3-title">Indian Tax Calculator</span></h3>
+                    <p id="t3-desc" class="text-sm text-slate-500 mb-4">ইনকাম ট্যাক্স এবং স্থানীয় সুদের হিসাব দ্রুত বের করুন।</p>
+                </div>
+                <div class="mt-4">
+                    <input type="number" id="user-income" placeholder="বার্ষিক আয় লিখুন / Annual Income (₹)" class="w-full border border-slate-200 p-2.5 rounded-xl text-sm mb-2 focus:outline-emerald-500"/>
+                    <button onclick="processToolExecution('Financial Report')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-2 rounded-xl transition text-sm">Calculate Allocation</button>
+                </div>
+            </div>
+
+            <!-- Engine 4: Web VoIP Caller -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-lg mb-2 text-slate-900 flex items-center gap-2">📞 <span id="t4-title">Free Browser Web-Call</span></h3>
+                    <p id="t4-desc" class="text-sm text-slate-500 mb-4">ইন্টারনেট ডেটা ব্যবহার করে ভারতে যেকোনো নম্বরে ২ মিনিটের ফ্রি কল করুন।</p>
+                </div>
+                <div class="mt-4">
+                    <input type="tel" id="user-phone" placeholder="মোবাইল নম্বর লিখুন / 10-Digit Mobile Number" class="w-full border border-slate-200 p-2.5 rounded-xl text-sm mb-2 focus:outline-emerald-500"/>
+                    <button onclick="processToolExecution('VoIP Connection Line')" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 rounded-xl transition text-sm">Initiate Encrypted Call</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer System Status -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-4 text-center mt-12 border-t border-slate-800">
+        <p>© 2026 Autonomous Digital Network | Operational Node Status: <span id="vault-status-badge" class="text-emerald-400 font-mono">ACTIVE</span></p>
+    </footer>
+
+    <script>
+        const localizationData = {
+            en: {
+                nav: "📁 Free Digital Utilities",
+                welcome: "Welcome! Select a tool below. Your files are processed safely inside your browser.",
+                btnText: "Audio Guide",
+                t1Title: "Govt Exam PDF Resizer",
+                t1Desc: "Compress your PDF file perfectly under 100KB for official forms.",
+                t2Title: "Instant BioData Builder",
+                t2Desc: "Create clean print-ready professional documents and invoices instantly.",
+                t3Title: "Indian Tax Calculator",
+                t3Desc: "Calculate dynamic Income Tax and local interest adjustments quickly.",
+                t4Title: "Free Browser Web-Call",
+                t4Desc: "Make a quick 2-minute voice call across India via internet data channel.",
+                speechText: "Hello user! Your files are completely secure. To save your generated document for free, please follow the simple native share utility below to support our network.",
+                alertMsg: "Secure pipeline active. Please complete standard validation on the next prompt."
+            },
+            bn: {
+                nav: "📁 ফ্রি ডিজিটাল ইউটিলিটি",
+                welcome: "স্বাগতম! নিচের যেকোনো একটি টুল বেছে নিন। আপনার ফাইলগুলি সম্পূর্ণ সুরক্ষিতভাবে আপনার ব্রাউজারে তৈরি করা হচ্ছে।",
+                btnText: "নির্দেশিকা শুনুন",
+                t1Title: "Govt Exam PDF Resizer",
+                t1Desc: "যেকোনো সরকারি ফর্মের জন্য আপনার PDF ফাইলটি ১০০KB-র নিচে ছোট করুন।",
+                t2Title: "Instant BioData Builder",
+                t2Desc: "খুব সহজে প্রিন্ট করার জন্য আপনার বায়োডাটা বা বিল তৈরি করুন।",
+                t3Title: "Indian Tax Calculator",
+                t3Desc: "ইনকাম ট্যাক্স এবং স্থানীয় সুদের হিসাব দ্রুত বের করুন।",
+                t4Title: "Free Browser Web-Call",
+                t4Desc: "ইন্টারনেট ডেটা ব্যবহার করে ভারতে যেকোনো নম্বরে ২ মিনিটের ফ্রি কল করুন।",
+                speechText: "নমস্কার বন্ধু! আপনার ফাইলটি সম্পূর্ণ সুরক্ষিতভাবে তৈরি করা হয়েছে। এটি বিনামূল্যে ডাউনলোড করার জন্য অনুগ্রহ করে পরবর্তী শেয়ার অপশনটি ব্যবহার করে আপনার বন্ধুদের সাথে লিংকটি শেয়ার করুন। ধন্যবাদ।",
+                alertMsg: "সুরক্ষিত প্রসেসিং সেশন অ্যাক্টিভ হয়েছে। ফাইলটি সেভ করতে পরবর্তী প্রম্পটটি সম্পন্ন করুন।"
+            }
+        };
+
+        let currentLang = 'bn';
+
+        // AUTOMATED SYSTEM HIBERNATION ENGINE
+        // This switch is managed securely in production environments via browser configurations.
+        // Change "RUN" to "SLEEP" to manually test the vault lockdown mode.
+        let VAULT_STATUS = "RUN"; 
+
+        function checkVaultState() {
+            if (VAULT_STATUS === "SLEEP") {
+                document.getElementById('vault-content').innerHTML = `
+                    <div class="max-w-md mx-auto bg-white border border-slate-200 p-8 rounded-2xl shadow-sm text-center mt-12 col-span-full">
+                        <div class="text-4xl mb-4">💤</div>
+                        <h2 class="font-bold text-xl text-slate-800 mb-2">Vault Optimization Active</h2>
+                        <p class="text-sm text-slate-500">Structural systems optimized. Returning active in next period.</p>
+                        <p class="text-xs text-emerald-500 font-mono mt-4">● Mode: Hibernated (Safe)</p>
+                    </div>
+                `;
+                document.getElementById('vault-status-badge').innerText = "HIBERNATED";
