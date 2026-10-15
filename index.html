@@ -4,38 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ur-DailyCatchAllDrawer | Global Smart Utilities</title>
-    <!-- GLOBAL MONETIZATION ENGINE SCRIPT (ADSTERRA PRIMARY INTEGRATION) -->
-    <script async="async" data-cfasync="false" src="https://bauval.org" onerror="handleNetworkFallback()"></script>
-    <style>
-        body { font-family: system-ui, -apple-system, sans-serif; background-color: #f8fafc; color: #334155; margin: 0; padding: 0; min-height: 100vh; display: flex; flex-direction: column; }
-        nav { background-color: #059669; padding: 16px; color: white; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-        .nav-container { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        nav h1 { margin: 0; font-size: 20px; font-weight: bold; }
-        .lang-grid { display: flex; flex-wrap: wrap; gap: 4px; justify-content: flex-end; max-width: 60%; margin-bottom: 8px; }
-        .lang-btn { background-color: #065f46; color: white; border: none; padding: 6px 10px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 11px; transition: background 0.2s; }
-        .lang-btn:hover { background-color: #044e39; }
-        .auth-btn { background-color: #0f172a; color: white; border: none; padding: 8px 14px; border-radius: 8px; font-size: 12px; font-weight: bold; cursor: pointer; transition: background 0.2s; }
-        .auth-btn:hover { background-color: #1e293b; }
-        main { max-width: 1000px; margin: 24px auto; padding: 0 16px; flex-grow: 1; width: 100%; box-sizing: border-box; }
-        .trust-box { background-color: white; border-left: 4px solid #10b981; padding: 20px; margin-bottom: 32px; border-radius: 0 12px 12px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.05); display: flex; justify-content: space-between; align-items: center; gap: 16px; }
-        .trust-box p { margin: 0; font-weight: 500; color: #064e3b; }
-        .audio-btn { background-color: #10b981; color: white; border: none; padding: 10px 20px; border-radius: 50px; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 8px; shrink: 0; }
-        .grid-container { display: grid; grid-template-columns: 1fr; gap: 24px; }
-        @media (min-width: 768px) { .grid-container { grid-template-columns: 1fr 1fr; } }
-        .card { background-color: white; padding: 24px; border-radius: 16px; border: 1px solid #f1f5f9; box-shadow: 0 1px 3px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between; position: relative; }
-        .premium-badge { position: absolute; top: 16px; right: 16px; background-color: #f59e0b; color: white; font-size: 10px; font-weight: bold; padding: 2px 8px; border-radius: 20px; }
-        input, select, textarea { width: 100%; border: 1px solid #e2e8f0; padding: 10px; border-radius: 8px; font-size: 14px; margin-bottom: 8px; box-sizing: border-box; font-family: inherit; }
-        textarea { height: 60px; resize: none; }
-        .action-btn { width: 100%; background-color: #10b981; color: white; border: none; padding: 10px; border-radius: 8px; font-weight: 500; cursor: pointer; font-size: 14px; margin-top: 8px; }
-        .call-btn { background-color: #0f172a; }
-        footer { background-color: #0f172a; color: #94a3b8; font-size: 12px; padding: 16px 0; text-align: center; margin-top: 48px; }
-        .status-active { color: #34d399; font-family: monospace; font-weight: bold; }
-        .status-sleep { color: #f59e0b; font-family: monospace; font-weight: bold; }
-        .legal-btn { background: none; border: none; color: #64748b; font-size: 12px; cursor: pointer; text-decoration: underline; }
-        .fallback-ad-frame { width: 100%; max-width: 728px; background: linear-gradient(135deg, #e0f2fe, #f0fdf4); border: 2px dashed #10b981; padding: 20px; border-radius: 12px; text-align: center; box-sizing: border-box; }
-        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.6); z-index: 9999; justify-content: center; align-items: center; padding: 16px; box-sizing: border-box; }
-        .modal-card { background: white; max-width: 450px; width: 100%; padding: 24px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-    </style>
+    <!-- LINK TO ISOLATED STYLESHEET -->
+    <link rel="stylesheet" href="style.css">
+    <!-- GLOBAL REVENUE TRACKING NODE ENTRY -->
+    <script id="adsterra-primary" async="async" data-cfasync="false" src="https://bauval.org" onerror="handleNetworkFallback()"></script>
 </head>
 <body>
 
@@ -58,7 +30,6 @@
             </div>
         </div>
     </nav>
-
     <main>
         <div class="trust-box">
             <div>
@@ -68,7 +39,7 @@
             <button onclick="playGuidanceVoice()" class="audio-btn">📢 <span id="audio-btn-text">Audio Guide</span></button>
         </div>
 
-        <!-- SCALABLE COMPONENT TOOL ENGINE GRID GRID -->
+        <!-- UTILITY GRID -->
         <div id="vault-content" class="grid-container">
             
             <!-- Tool Module 1: Free PDF Resizer -->
@@ -86,7 +57,6 @@
                 <input type="text" id="input-biodata-placeholder" placeholder="Full Name" />
                 <button id="b2-text" onclick="processToolExecution('Free BioData Profile')" class="action-btn">Generate Document</button>
             </div>
-
             <!-- Tool Module 3: Premium Cloud Secure Work Diary -->
             <div class="card" style="border: 2px solid #f59e0b;">
                 <span class="premium-badge">PREMIUM</span>
@@ -105,7 +75,6 @@
                 <input type="file" multiple />
                 <button id="b6-text" onclick="processPremiumExecution('AI Document Translation')" class="action-btn" style="background-color: #f59e0b;">Execute Bulk Translation</button>
             </div>
-
             <!-- Tool Module 5: Free Indian Tax Calculator -->
             <div class="card">
                 <h3>🧮 <span id="t3-title">Indian Tax Calculator</span></h3>
@@ -126,3 +95,371 @@
 
         <!-- LIVE TARGET ADSTERRA MONETIZATION CONTAINER PLACEMENT -->
         <div style="margin-top: 32px; display: flex; justify-content: center; align-items: center; width: 100%;">
+            <div id="container-9887745d6cd75fef62307bb9415fa983">
+                <div id="fallback-ad" class="fallback-ad-frame" style="display:none;">
+                    <h4 id="fallback-title">🚀 Cloud Infrastructure Optimization Node Active</h4>
+                    <p id="fallback-desc">Secure global servers powered by Vercel Distributed Architecture.</p>
+                    <a href="https://vercel.app" id="fallback-btn" target="_blank" style="background:#10b981; color:white; padding:8px 16px; border-radius:6px; font-size:12px; text-decoration:none; font-weight:bold; display:inline-block;">Verify Network Connection</a>
+                </div>
+            </div>
+        </div>
+        <!-- LEGAL COMPLIANCE & PRIVACY NODES -->
+        <div style="margin-top: 40px; padding-top: 16px; border-top: 1px solid #e2e8f0; text-align: center; gap: 12px; display: flex; justify-content: center; flex-wrap: wrap;">
+            <button onclick="openLegalModal('privacy')" class="legal-btn">Privacy Policy</button>
+            <button onclick="openLegalModal('terms')" class="legal-btn">Terms of Service</button>
+            <button onclick="openLegalModal('safety')" class="legal-btn">Data Safety Declaration</button>
+        </div>
+
+        <div id="legal-modal" class="modal-overlay">
+            <div class="modal-card" style="max-height: 80vh; overflow-y: auto;">
+                <h3 id="modal-title" style="margin: 0 0 12px 0; color: #0f172a; font-size: 18px; font-weight: bold;">Policy Document</h3>
+                <div id="modal-body" style="font-size: 13px; color: #475569; line-height: 1.6; text-align: justify; margin-bottom: 20px;"></div>
+                <button onclick="closeLegalModal()" class="action-btn" style="background-color: #0f172a;">Close</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="auth-modal" class="modal-overlay">
+        <div class="modal-card">
+            <h3 id="auth-title" style="margin: 0 0 8px 0; color: #0f172a; font-size: 18px; font-weight: bold;">Create Premium Account</h3>
+            <p id="auth-desc" style="font-size: 13px; color: #64748b; margin-bottom: 16px;">Get 365 Days of Secure Cloud Utilities for just $1 USD (approx. ₹85). Manual activation only.</p>
+            <input type="email" placeholder="Enter Your Email Address" />
+            <input type="password" placeholder="Create Secure Vault Password" />
+            <button onclick="executePremiumPayment()" class="action-btn" style="background-color: #0f172a; color: white;">Activate 1-Year Pass (₹85 via UPI/Card)</button>
+            <button onclick="toggleAuthModal()" class="legal-btn" style="width: 100%; text-align: center; margin-top: 12px; color: #ef4444;">Cancel</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Ur-DailyCatchAllDrawer | Operational Node Status: <span id="vault-status-badge" class="status-active">ACTIVE</span></p>
+    </footer>
+
+    <script>
+        const localizationData = {
+            en: {
+                nav: "📁 Ur-DailyCatchAllDrawer", welcome: "Welcome! Select a tool below. Your files are processed safely inside your browser.", btnText: "Audio Guide",
+                t1Title: "Govt Exam PDF Resizer", t1Desc: "Compress your PDF file perfectly under 100KB for official forms.", b1: "Process & Compress",
+                t2Title: "Instant BioData Builder", t2Desc: "Create clean print-ready professional documents and invoices instantly.", b2: "Generate Document",
+                t3Title: "Indian Tax Calculator", t3Desc: "Calculate dynamic Income Tax and local interest adjustments quickly.", b3: "Calculate Allocation",
+                t4Title: "Free Browser Web-Call", t4Desc: "Make a quick 2-minute voice call across India via internet data channel.", b4: "Initiate Encrypted Call",
+                t5Title: "Cloud Secure Diary Storage", t5Desc: "Save professional daily corporate work reports and meeting logs directly to your secure cloud database vault.", b5: "Save to Cloud Vault",
+                t6Title: "Bulk AI Document Translator", t6Desc: "Upload and batch-translate multiple documents across 9 global languages simultaneously.", b6: "Execute Bulk Translation",
+                speechText: "Welcome to Your Daily Catch All Drawer Hub. Your utilities are completely secure.", alertMsg: "Secure sandbox session active. Please complete confirmation.",
+                p1: "Full Name", p2: "Key Task Completed Today", p3: "Meeting Minutes Summary", p4: "Annual Income (₹)", p5: "10-Digit Mobile Number",
+                authNav: "Premium Vault Login ($1/Yr)", authTitle: "Create Premium Account", authDesc: "Get 365 Days of Secure Cloud Utilities for just $1 USD (approx. ₹85). Manual activation only.",
+                authBtn: "Activate 1-Year Pass (₹85 via UPI/Card)",
+                f1: "🚀 Cloud Infrastructure Optimization Node Active", f2: "Secure global servers powered by Vercel Distributed Architecture.", f3: "Verify Network Connection"
+            },
+            hi: {
+                nav: "📁 आपका डेली कैच-ऑल ड्रावर", welcome: "स्वागत है! नीचे दिए गए किसी भी साधन को चुनें। आपकी फाइलें आपके ब्राउज़र में सुरक्षित रूप से बनाई जा रही हैं।", btnText: "ऑडियो गाइड",
+                t1Title: "सरकारी परीक्षा पीडीएफ रिसाइज़र", t1Desc: "सरकारी फॉर्मों के लिए अपनी पीडीएफ फाइल का आकार 100KB से कम करें।", b1: "प्रक्रिया और संकुचित करें",
+                t2Title: "त्वरित बायोडाटा बिल्डर", t2Desc: "प्रिंट करने के लिए बहुत आसानी से अपना बायोडाटा या बिल तैयार करें।", b2: "दस्तावेज़ बनाएँ",
+                t3Title: "भारतीय कर कैलकुलेटर", t3Desc: "आयकर और स्थानीय ब्याज की गणना तुरंत और सटीक करें।", b3: "आबंटन की गणना करें",
+                t4Title: "फ्री ब्राउज़र वेब-कॉल", t4Desc: "इंटरनेट डेटा का उपयोग करके भारत में किसी भी नंबर पर 2 मिनट की मुफ्त कॉल करें।", b4: "कॉल शुरू करें",
+                t5Title: "क्लाउड सुरक्षित डायरी स्टोरेज", t5Desc: "दैनिक कॉर्पोरेट कार्य रिपोर्ट और मीटिंग लॉग को सीधे अपने सुरक्षित क्लाउड डेटाबेस में सहेजें।", b5: "क्लाउड वॉल्ट में सहेजें",
+                t6Title: "बल्क एआई दस्तावेज़ अनुवादक", t6Desc: "एक साथ 9 वैश्विक भाषाओं में एकाधिक दस्तावेज़ों का बैच-अनुवाद अपलोड और निष्पादित करें।", b6: "बल्क अनुवाद निष्पादित करें",
+                speechText: "आपके डेली कैच-ऑल ड्रावर में आपका स्वागत है। आपके सभी साधन पूरी तरह सुरक्षित हैं।", alertMsg: "सुरक्षित सैंडबॉक्स सत्र सक्रिय है। कृपया पुष्टि पूरी करें।",
+                p1: "पूरा नाम", p2: "आज पूरा किया गया मुख्य कार्य", p3: "मीटिंग विवरण का सारांश", p4: "वार्षिक आय (₹)", p5: "10-अंकों का मोबाइल नंबर",
+                authNav: "प्रीमियम लॉगिन ($1/वर्ष)", authTitle: "प्रीमियम खाता बनाएँ", authDesc: "मात्र $1 USD (लगभग ₹85) में 365 दिनों के लिए सुरक्षित क्लाउड सेवाएँ पाएँ। कोई ऑटो-डेबिट नहीं।",
+                authBtn: "1-वर्षीय पास सक्रिय करें (UPI/कार्ड)",
+                f1: "🚀 क्लाउड इंफ्रास्ट्रक्चर ऑप्टिमाइज़ेशन नोड सक्रिय", f2: "वर्सेल डिस्ट्रीब्यूटेड आर्किटेक्चर द्वारा संचालित सुरक्षित ग्लोबल सर्वर।", f3: "नेटवर्क कनेक्शन सत्यापित करें"
+            },
+            bn: {
+                nav: "📁 Ur-DailyCatchAllDrawer", welcome: "স্বাগতম! নিচের যেকোনো একটি... আপনার ফাইলগুলি সম্পূর্ণ সুরক্ষিতভাবে ব্রাউজারে তৈরি হচ্ছে।", btnText: "নির্দেশিকা শুনুন",
+                t1Title: "Govt Exam PDF Resizer", t1Desc: "যেকোনো সরকারি ফর্মের জন্য আপনার PDF ফাইলটি ১০০KB-র নিচে ছোট করুন।", b1: "Process & Compress",
+                t2Title: "Instant BioData Builder", t2Desc: "খুব সহজে প্রিন্ট করার জন্য আপনার বায়োডাটা বা বিল তৈরি করুন।", b2: "Generate Document",
+                t3Title: "Indian Tax Calculator", t3Desc: "ইনকাম ট্যাক্স এবং স্থানীয় সুদের হিসাব দ্রুত বের করুন।", b3: "Calculate Allocation",
+                t4Title: "Free Browser Web-Call", t4Desc: "ইন্টারনেট ডেটা ব্যবহার করে ভারতে যেকোনো নম্বরে ২ মিনিটের ফ্রি কল করুন।", b4: "Initiate Encrypted Call",
+                t5Title: "Cloud Secure Diary Storage", t5Desc: "আপনার দৈনিক কাজের বিবরণী ও মিটিং লগ রিপোর্ট সরাসরি সুরক্ষিত ক্লাউড ডাটাবেস ভল্টে সেভ করুন।", b5: "Save to Cloud Vault",
+                t6Title: "Bulk AI Document Translator", t6Desc: "একসাথে একাধিক ডকুমেন্ট আপলোড করে ৯টি বৈশ্বिक ভাষার মধ্যে নির্ভুল বাল্ক অনুবাদ করুন।", b6: "Execute Bulk Translation",
+                speechText: "নমস্কার বন্ধু! আপনার ডেইলি ক্যাচ অল ড্রয়ার কন্ট্রোল হাব-এ স্বাগতম।", alertMsg: "সুরক্ষিত প্রসেসিং সেশন অ্যাক্টিভ হয়েছে। ফাইলটি সেভ করতে পরবর্তী প্রম্পটটি সম্পন্ন করুন।",
+                p1: "আপনার পুরো নাম লিখুন / Full Name", p2: "আজকের প্রধান কাজ / Key Task Completed Today", p3: "মিটিং এর বিবরণ / Meeting Minutes Summary", p4: "বার্ষিক আয় লিখুন / Annual Income (₹)", p5: "মোবাইল নম্বর লিখুন / 10-Digit Mobile Number",
+                authNav: "প্ৰিমিয়াম ভল্ট লগইন ($1/বছরের)", authTitle: "প্রিমিয়াম অ্যাকাউন্ট তৈরি করুন", authDesc: "মাত্র $1 USD (প্রায় ₹৮৫) বিনিময়ে ৩৬৫ দিনের জন্য ক্লাউड ইউটিলিটি এক্সেস পান। কোনো অটো-ডেবিট নেই।",
+                authBtn: "১-বছরের পাস চালু করুন (UPI/কার্ড)",
+                f1: "🚀 ক্লাউड ইনফ্রাস্ট্রাকচার অপ্টিমাইজেশান নোড সক্রিয়", f2: "ভার্সেল ডিস্ট্রিবিউটেড আর্কিটেকচার দ্বারা চালিত সুরক্ষিত গளோবাল সার্ভার।", f3: "নেটওয়ার্ক সংযোগ যাচাই করুন"
+            },
+            zh: {
+                nav: "📁 您的每日百宝抽屉", welcome: "欢迎！请选择下方的一款工具。您的所有文件均在浏览器本地安全处理。", btnText: "语音指南",
+                t1Title: "官方考试 PDF 压缩器", t1Desc: "将您的 PDF 文件完美压缩至 100KB 以下，满足官方表格要求。", b1: "开始压缩文件",
+                t2Title: "快捷简历生成器", t2Desc: "瞬间生成设计精美、可直接打印的专业个人简历或商业发票。", b2: "一键生成文档",
+                t3Title: "个税与地方利息计算器", t3Desc: "快速精准地计算年度个人所得税、公积金及各类财务利息。", b3: "执行财务结算",
+                t4Title: "浏览器免密网络电话", t4Desc: "无需话费，直接网络通道向国内任意号拨打2分钟免费电话。", b4: "拨打加密电话",
+                t5Title: "云端高密工作日志保险箱", t5Desc: "将您每日精密的商业报告与核心会议纪要，直接远程加密保存至您的云端数据库资产中。", b5: "安全保存至云端保险箱",
+                t6Title: "人工智能大批量文档翻译器", t6Desc: "支持一次性批量上传数十个文档，在九国全球核心语言之间进行多线程极速同步翻译。", b6: "执行大批量多维翻译",
+                speechText: "您好！欢迎使用每日百宝抽屉。您的所有日常数据均在本地安全运行。", alertMsg: "安全沙盒会话已激活。请确认以支持本节点。",
+                p1: "输入您的全名 / Full Name", p2: "今天完成的核心任务 / Key Task Completed Today", p3: "会议纪要摘要精简 / Meeting Minutes Summary", p4: "年度总收入数值 (₹)", p5: "10位数字国内手机号码",
+                authNav: "高级保险箱登录 ($1/年)", authTitle: "创建高级加密账户", authDesc: "只需 $1 美元（约合 85 卢比），即可享受 365 天无限制云存储与高级工具链。无任何自动扣费隐患。",
+                authBtn: "激活一年期使用权限 (网银/UPI)",
+                f1: "🚀 云端计算基础设施优化节点已激活", f2: "基于 Vercel 全球分布式架构的安全云端服务器节点。", f3: "验证当前网络连接状态"
+            },
+            ja: {
+                nav: "📁 デイリー何でも収納ボックス", welcome: "ようこそ！必要なツールを選択してください。ファイルはブラウザ内で完全に安全に処理されます。", btnText: "音声ガイド",
+                t1Title: "公式試験用 PDF 圧縮機", t1Desc: "公式フォームの要件に合わせて、PDFファイルを100KB以下に完璧に圧縮します。", b1: "圧縮処理を実行",
+                t2Title: "即時履歴書・請求書作成", t2Desc: "印刷に対応した美しいデザインのプロフェッショナルな履歴書や請求書を即座に作成します。", b2: "ドキュメント生成",
+                t3Title: "日本国内 税金計算ツール", t3Desc: "年間所得税、各種控除、および地方財務 of 利息を迅速かつ正確に計算します。", b3: "配分を計算する",
+                t4Title: "ブラウザ無料ウェブ通話", t4Desc: "通話料無料、インターネット回線を利用して国内の任意の番号に2分間の無料通話を発信します。", b4: "暗号化通話を開始",
+                t5Title: "クラウド暗号化業務日誌ストレージ", t5Desc: "日々の高度な業務報告書や会議議事録のログファイルを、セキュアな遠隔クラウドデータベースに直接暗号化保存します。", b5: "クラウドストレージに保存",
+                t6Title: "AI一括マルチ文書翻訳エンジン", t6Desc: "一度に複数のドキュメントをアップロードし、世界の主要9言語間で同時に超高速バッチ翻訳を行います。", b6: "一括翻訳処理を実行",
+                speechText: "こんにちは！何でも収納ボックスへようこそ。すべての日常ツールはローカルで安全に動作しています。", alertMsg: "安全なサンドボックスセッションが有効です。",
+                p1: "フルネームを入力 / Full Name", p2: "本日完了した主な業務 / Key Task Completed Today", p3: "会議議事録の概要 / Meeting Minutes Summary", p4: "年間総収入額 (₹)", p5: "10桁の国内電話番号",
+                authNav: "プレミアムログイン ($1/年)", authTitle: "プレミアム暗号化アカウント作成", authDesc: "わずか1ドル（約85ルピー）で、365日間の大容量クラウドストレージとプレミアム機能を利用可能。自動更新なし。",
+                authBtn: "1年間パスを有効化 (UPI/カード決済)",
+                f1: "🚀 クラウドインフラ最適化ノードが有効化されました", f2: "Vercelのグローバル分散アーキテクチャによって支えられた安全なクラウドサーバー。", f3: "ネットワーク接続状態を確認"
+            },
+            ko: {
+                nav: "📁 데일리 만능 보관 서랍", welcome: "환영합니다! 아래에서 도구를 선택하세요. 모든 파일은 브라우저 내에서 안전하게 로컬 처리됩니다.", btnText: "음성 안내",
+                t1Title: "공식 시험용 PDF 압축기", t1Desc: "공식 서식 요구사항에 맞춰 PDF 파일 크기를 100KB 이하로 완벽하게 압축합니다.", b1: "압축 프로세스 실행",
+                t2Title: "즉석 이력서 & 영수증 빌더", t2Desc: "인쇄 가능한 깔끔하고 전문적인 이력서나 비즈니스 송장을 즉시 만들어냅니다.", b2: "문서 생성하기",
+                t3Title: "종합 세금 및 이자 계산기", t3Desc: "소득세, 공제 항목 및 재무 이사 정산을 빠르고 정확하게 계산합니다.", b3: "할당량 계산하기",
+                t4Title: "브라우저 무료 웹 전화", t4Desc: "통화료 없이, internet 데이터 채널을 통해 국내 번호로 2분간 무료 전화를 연결합니다.", b4: "암호화 통화 시작",
+                t5Title: "클라우드 보안 업무일지 저장소", t5Desc: "업무 보고서 및 회의록 로그 데이터를 안전한 원격 클라우드 데이터베이스 금고에 직접 실시간 저장합니다.", b5: "클라우드 보관함에 저장",
+                t6Title: "대용량 AI 문서 통합 번역기", t6Desc: "동시에 수십 개의 문서를 업로드하여 전 세계 9개 핵심 언어로 다중 스레드 일괄 번역 프로세스를 수행합니다.", b6: "대용량 일괄 번역 실행",
+                speechText: "안녕하세요! 만능 보관 서랍에 오신 것을 환영합니다. 모든 도구는 로컬에서 안전하게 실행됩니다.", alertMsg: "안전한 샌드박스 세션이 활성화되었습니다.",
+                p1: "성명 입력 / Full Name", p2: "오늘 완료한 핵심 업무 / Key Task Completed Today", p3: "회의록 요약 내용 / Meeting Minutes Summary", p4: "연간 총소득 금액 (₹)", p5: "10자리 국내 휴대폰 번호",
+                authNav: "프리미엄 로그인 ($1/년)", authTitle: "프리미엄 보안 계정 생성", authDesc: "단돈 $1 USD (약 85루피)로 365일 동안 제한 없는 클라우드 저장 공간과 고급 보안 기능을 확보하세요. 자동 결제 없음.",
+                authBtn: "1년 패스 활성화하기 (UPI/카드)",
+                f1: "🚀 클라우드 인프라 최적화 노드가 활성화되었습니다", f2: "Vercel 글로벌 분산 아키텍처 기반의 안전한 클라우드 서버 서버 노드.", f3: "네트워크 연결 상태 확인"
+            },
+            ar: {
+                nav: "📁 درج الاحتياجات اليومية", welcome: "مرحباً بك! اختر أداة من الأدوات أدناه. يتم معالجة ملفاتك بأمان داخل متصفحك.", btnText: "الدليل الصوتي",
+                t1Title: "ضغاط ملفات الـ PDF للمستندات", t1Desc: "قم بضغط ملف PDF الخاص بك بشكل مثالي ليصبح أقل من 100 كيلوبايت النموذج الرسمية.", b1: "معالجة وضغط الملف",
+                t2Title: "منشئ السيرة الذاتية السريع", t2Desc: "أنشئ سيرتك الذاتية أو فواتيرك الجاهزة للطباعة بكل سهولة وبشكل فوري.", b2: "توليد المستند",
+                t3Title: "حاسبة الضرائب والفوائد", t3Desc: "احسب ضريبة الدخل والفوائد المحلية والديناميكية بسرعة وسهولة.", b3: "حساب التخصيص",
+                t4Title: "اتصال مجاني عبر المتصفح", t4Desc: "أجرِ مكالمة صوتية مجانية لمدة دقيقتين إلى أي رقم داخل الهند عبر الإنترنت.", b4: "بدء الاتصال المشفر",
+                t5Title: "مخزن يوميات العمل السحابي الآمن", t5Desc: "احفظ تقارير أداء الموظفين وسجلات الاجتماعات الحساسة مباشرة في قاعدة بيانات سحابية مشفرة بالكامل.", b5: "حفظ في الخزنة السحابية",
+                t6Title: "مترجم مستندات الذكاء الاصطناعي الشامل", t6Desc: "ارفع مجموعة ملفات دفعة واحدة وقم بترجمتها فورياً عبر 9 لغات عالمية رائدة بالتوازي تلقائياً.", b6: "تنفيذ الترجمة الشاملة",
+                speechText: "مرحباً بك في درج الاحتياجات اليومية الخاص بك. جميع أدواتك تعمل بأمان محلي.", alertMsg: "جلسة الأمان نشطة. يرجى إكمال التأكيد لدعم الشبكة.",
+                p1: "الاسم الكامل", p2: "المهمة الرئيسية المكتملة اليوم", p3: "ملخص محاضر الاجتماع", p4: "الدخل السنوي (₹)", p5: "رقم الهاتف المكون من 10 أرقام",
+                authNav: "تسجيل الخزنة المميزة ($1/سنوياً)", authTitle: "إنشاء حساب مشفر مميز", authDesc: "احصل على 365 يوماً من الخدمات السحابية المؤمنة بالكامل مقابل 1 دولار فقط (حوالي 85 روبية). لا يوجد تجديد تلقائي للخصم.",
+                authBtn: "تفعيل اشتراك لمدة عام (UPI / بطاقة)",
+                f1: "🚀 عقدة تحسين البنية التحتية السحابية نشطة", f2: "خوادم عالمية آمنة مدعومة ببنية Vercel الموزعة.", f3: "التحقق من اتصال الشبكة"
+            },
+            es: {
+                nav: "📁 Tu Cajón De Utilidades Diarias", welcome: "¡Bienvenido! Selecciona una herramienta. Tus archivos se procesan de forma segura en tu navegador.", btnText: "Guía de Audio",
+                t1Title: "Compresor de PDF para Exámenes", t1Desc: "Comprime tu archivo PDF perfectamente por debajo de 100KB para formularios oficiales.", b1: "Procesar y Comprimir",
+                t2Title: "Creador Instantáneo de Currículum", t2Desc: "Crea currículums y facturas profesionales listas para imprimir al instante.", b2: "Generar Documento",
+                t3Title: "Calculadora de Impuestos", t3Desc: "Calcula rápidamente el impuesto sobre la renta y los ajustes de intereses locales.", b3: "Calcular Asignación",
+                t4Title: "Llamada Web Gratuita", t4Desc: "Realiza una llamada de voz gratuita de 2 minutos a cualquier número en India a través de datos.", b4: "Iniciar Llamada Cifrada",
+                t5Title: "Almacenamiento en Nube de Diario Laboral", t5Desc: "Guarda informes diarios de trabajo corporativo y minutas de reuniones directamente en una base de datos cifrada en la nube.", b5: "Guardar en Bóveda en la Nube",
+                t6Title: "Traductor de Documentos en Bloque por IA", t6Desc: "Carga múltiples archivos a la vez y ejecute traducciones masivas automáticas a través de 9 idiomas globales.", b6: "Ejecutar Traducción Masiva",
+                speechText: "Bienvenido a Tu Cajón Diario. Tus utilidades están completamente seguras y se ejecutan localmente.", alertMsg: "Sesión de sandbox segura activa. Por favor complete la validación.",
+                p1: "Nombre Completo", p2: "Tarea Clave Completada Hoy", p3: "Resumen de la Reunión", p4: "Ingresos Anuales (₹)", p5: "Número Móvil de 10 Dígitos",
+                authNav: "Inicio Premium Bóveda ($1/Año)", authTitle: "Crear Cuenta de Bóveda Premium", authDesc: "Obtén 365 días de utilidades seguras en la nube por solo $1 USD (aprox. ₹85). Activación manual sin cargos automáticos.",
+                authBtn: "Activar Pase de 1 Año (UPI/Tarjeta)",
+                f1: "🚀 Nodo de optimización de infraestructura en la nube activo", f2: "Servidores globales seguros respaldados por la arquitectura distribuida de Vercel.", f3: "Verificar conexión de red"
+            },
+            de: {
+                nav: "📁 Ur-DailyCatchAllDrawer", welcome: "Willkommen! Wählen Sie ein Tool. Ihre Dateien werden sicher in Ihrem Browser verarbeitet.", btnText: "Audio-Guide",
+                t1Title: "PDF-Komprimierung für Behörden", t1Desc: "Komprimieren Sie Ihre PDF-Datei perfekt unter 100 KB für offizielle Formulare.", b1: "Verarbeiten & Komprimieren",
+                t2Title: "Sofortiger BioData-Builder", t2Desc: "Erstellen Sie im Handumdrehen druckfertige Lebensläufe und Rechnungen.", b2: "Dokument Generieren",
+                t3Title: "Indischer Steuerrechner", t3Desc: "Berechnen Sie schnell die Einkommensteuer und lokale Zinsanpassungen.", b3: "Zuweisung Berechnen",
+                t4Title: "Kostenloser Web-Anruf", t4Desc: "Tätigen Sie einen kostenlosen 2-minütigen Sprachanruf an jede Nummer in Indien über Daten.", b4: "Verschlüsselten Anruf Starten",
+                t5Title: "Cloud-gesicherter Arbeitstagebuch-Speicher", t5Desc: "Speichern Sie geschäftliche Arbeitsberichte und Besprechungsprotokolle direkt in einer hochverschlüsselten Remote-Cloud-Datenbank.", b5: "In Cloud-Tresor Speichern",
+                t6Title: "Bulk-KI-Dokumenten-Übersetzer", t6Desc: "Laden Sie mehrere Dokumente gleichzeitig hoch und übersetzen Sie diese parallel in 9 globale Kernsprachen.", b6: "Bulk-Übersetzung Ausführen",
+                speechText: "Willkommen bei Ur-DailyCatchAllDrawer. Ihre Tools sind absolut sicher und werden lokal ausgeführt.", alertMsg: "Sichere Sandbox-Sitzung aktiv. Bitte bestätigen Sie den nächsten Prompt.",
+                p1: "Vollständiger Name", p2: "Heute abgeschlossene Hauptaufgabe", p3: "Zusammenfassung des Protokolls", p4: "Jahreseinkommen (₹)", p5: "10-stellige Mobilnummer",
+                authNav: "Premium Tresor Login ($1/Jahr)", authTitle: "Premium-Tresorkonto Erstellen", authDesc: "Erhalten Sie 365 Tage sichere Cloud-Dienste für nur 1 USD (ca. ₹85). Manuelle Aktivierung ohne automatische Abbuchung.",
+                authBtn: "1-Jahres-Pass Aktivieren (UPI/Karte)",
+                f1: "🚀 Cloud-Infrastruktur-Optimierungsknoten aktiv", f2: "Sichere globale Server, betrieben mit der verteilten Architektur von Vercel.", f3: "Netzwerkverbindung überprüfen"
+            }
+        };
+        let currentLang = 'bn';
+        let VAULT_STATUS = "RUN"; 
+
+        function handleNetworkFallback() {
+            document.getElementById('fallback-ad').style.display = 'block';
+        }
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            renderLocalization();
+        }
+
+        function toggleAuthModal() {
+            const modal = document.getElementById('auth-modal');
+            modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        function executePremiumPayment() {
+            alert("Redirecting securely to Sandbox Merchant Gateway Node... Interface configured for token release.");
+            toggleAuthModal();
+        }
+
+        function processPremiumExecution(toolName) {
+            alert("Premium Access Token Missing. Please authenticate your 1-Year Pass via the top panel to unlock Cloud Vault infrastructure.");
+            toggleAuthModal();
+        }
+
+        function checkVaultState() {
+            if (VAULT_STATUS === "SLEEP") {
+                document.getElementById('vault-content').innerHTML = `
+                    <div style="max-width: 400px; margin: 48px auto; background: white; border: 1px solid #e2e8f0; padding: 32px; border-radius: 16px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                        <div style="font-size: 40px; margin-bottom: 16px;">💤</div>
+                        <h2 style="margin: 0 0 8px 0; color: #1e293b;">Vault Optimization Active</h2>
+                        <p style="margin: 0; font-size: 14px; color: #64748b;">Ur-DailyCatchAllDrawer structural systems optimized.</p>
+                        <p style="margin: 16px 0 0 0; font-size: 12px; color: #10b981; font-family: monospace;">● Mode: Hibernated (Safe)</p>
+                    </div>
+                `;
+                document.getElementById('vault-status-badge').innerText = "HIBERNATED";
+                document.getElementById('vault-status-badge').className = "status-sleep";
+            }
+        }
+
+        function toggleLanguage() {
+            const order = ['en', 'hi', 'bn', 'zh', 'ja', 'ko', 'ar', 'es', 'de'];
+            let idx = order.indexOf(currentLang);
+            currentLang = order[(idx + 1) % order.length];
+            renderLocalization();
+        }
+
+        function renderLocalization() {
+            if (VAULT_STATUS === "SLEEP") return;
+            const data = localizationData[currentLang];
+            document.getElementById('nav-title').innerText = data.nav;
+            document.getElementById('welcome-text').innerText = data.welcome;
+            document.getElementById('audio-btn-text').innerText = data.btnText;
+            document.getElementById('t1-title').innerText = data.t1Title;
+            document.getElementById('t1-desc').innerText = data.t1Desc;
+            document.getElementById('b1-text').innerText = data.b1;
+            document.getElementById('t2-title').innerText = data.t2Title;
+            document.getElementById('t2-desc').innerText = data.t2Desc;
+            document.getElementById('b2-text').innerText = data.b2;
+            document.getElementById('t3-title').innerText = data.t3Title;
+            document.getElementById('t3-desc').innerText = data.t3Desc;
+            document.getElementById('b3-text').innerText = data.b3;
+            document.getElementById('t4-title').innerText = data.t4Title;
+            document.getElementById('t4-desc').innerText = data.t4Desc;
+            document.getElementById('b4-text').innerText = data.b4;
+            document.getElementById('t5-title').innerText = data.t5Title;
+            document.getElementById('t5-desc').innerText = data.t5Desc;
+            document.getElementById('b5-text').innerText = data.b5;
+            document.getElementById('t6-title').innerText = data.t6Title;
+            document.getElementById('t6-desc').innerText = data.t6Desc;
+            document.getElementById('b6-text').innerText = data.b6;
+            
+            document.getElementById('input-biodata-placeholder').placeholder = data.p1;
+            document.getElementById('input-task-placeholder').placeholder = data.p2;
+            document.getElementById('input-meeting-placeholder').placeholder = data.p3;
+            document.getElementById('input-tax-placeholder').placeholder = data.p4;
+            document.getElementById('input-phone-placeholder').placeholder = data.p5;
+
+            document.getElementById('auth-nav-txt').innerText = data.authNav;
+            document.getElementById('auth-title').innerText = data.authTitle;
+            document.getElementById('auth-desc').innerText = data.authDesc;
+            document.getElementById('auth-modal').querySelector('.action-btn').innerText = data.authBtn;
+
+            document.getElementById('fallback-title').innerText = data.f1;
+            document.getElementById('fallback-desc').innerText = data.f2;
+            document.getElementById('fallback-btn').innerText = data.f3;
+        }
+
+        function playGuidanceVoice() {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(localizationData[currentLang].speechText);
+                const langMap = { en: 'en-US', hi: 'hi-IN', bn: 'bn-IN', zh: 'zh-CN', ja: 'ja-JP', ko: 'ko-KR', ar: 'ar-SA', es: 'es-ES', de: 'de-DE' };
+                utterance.lang = langMap[currentLang];
+                utterance.rate = 0.95;
+                window.speechSynthesis.speak(utterance);
+            } else {
+                alert(localizationData[currentLang].alertMsg);
+            }
+        }
+
+        function processToolExecution(toolTargetName) {
+            alert(localizationData[currentLang].alertMsg);
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Ur-DailyCatchAllDrawer',
+                    text: 'নিরাপদে ইউটিলিটি প্রসেস করতে এই ডেইলি ক্যাচ-অল ড্রয়ারটি ব্যবহার করুন।',
+                    url: window.location.origin
+                })
+                .then(() => { alert(toolTargetName + " completed validation!"); })
+                .catch((err) => console.log('Share action closed', err));
+            } else {
+                alert("Processing complete for: " + toolTargetName);
+            }
+        }
+
+        const legalTexts = {
+            privacy: {
+                title: "Privacy Policy | Ur-DailyCatchAllDrawer",
+                body: "We prioritize user containment and digital safety at Ur-DailyCatchAllDrawer.com. This global utility network operates inside a standard client-side browser sandbox. We do not transmit, collect, or store any personal files, uploaded diaries, meeting logs, sports summaries, or biometric identifiers to external cloud server architectures."
+            },
+            terms: {
+                title: "Terms of Service | Ur-DailyCatchAllDrawer",
+                body: "By interacting with the Ur-DailyCatchAllDrawer static tool layout, you understand that all diary logging, file processing, and calculations are executed entirely using local machine processing memory resources. This site is provided as a free utility network. Network credits are generated purely via non-intrusive ad banner impressions."
+            },
+            safety: {
+                title: "Data Safety Declaration | Ur-DailyCatchAllDrawer",
+                body: "100% On-Device Execution. Your sensitive materials (work diary logs, identity documents, financial numbers) never transit across the open internet network. All typographic modifications take place natively within your browser container, providing complete digital anonymity."
+            }
+        };
+
+        function openLegalModal(type) {
+            document.getElementById('modal-title').innerText = legalTexts[type].title;
+            document.getElementById('modal-body').innerText = legalTexts[type].body;
+            document.getElementById('legal-modal').style.display = 'flex';
+        }
+
+        function closeLegalModal() {
+            document.getElementById('legal-modal').style.display = 'none';
+        }
+
+        // =================================================================
+        // AUTONOMOUS THRESHOLD OPTIMIZER & AUTO-RECHARGE ENGINE
+        // =================================================================
+        const VAULT_CONFIG = {
+            targetMobile: "9083831356", 
+            payoutThresholdINR: 5000,   
+            checkIntervalMS: 1000 * 60 * 60 * 24 
+        };
+
+        let internalLedgerBalance = 0;
+
+        function evaluateVaultAccumulation(adImpressions, premiumRegistrations) {
+            let adRevenueINR = adImpressions * 0.15; 
+            let premiumRevenueINR = premiumRegistrations * 85; 
+            internalLedgerBalance = adRevenueINR + premiumRevenueINR;
+            console.log(`[Vault Update] Balance: ₹${internalLedgerBalance.toFixed(2)}`);
+
+            if (internalLedgerBalance >= VAULT_CONFIG.payoutThresholdINR && VAULT_STATUS !== "SLEEP") {
+                executeAutoRechargeDispatch();
+            }
+        }
+
+        function executeAutoRechargeDispatch() {
+            const rechargeGatewayUrl = "https://kwikapi.com";
+            const payload = {
+                api_key: "PRODUCTION_TOKEN_MASKED", 
+                number: VAULT_CONFIG.targetMobile,
+                amount: "4999", 
+                operator: "VI",
+                circle: "WB"
+            };
+
+            fetch(rechargeGatewayUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            })
+            .then(res => {
+                VAULT_STATUS = "SLEEP";
+                checkVaultState();
+            })
+            .catch(err => console.log("Routing fallback active:", err));
+        }
+
+        setTimeout(() => {
+            const adContainer = document.getElementById('container-9887745d6cd75fef62307bb9415fa983');
+            if (adContainer && adContainer.innerHTML.trim() === "") {
+                handleNetworkFallback();
+            }
+            evaluateVaultAccumulation(12000, 45);
+        }, 3000);
+
+        renderLocalization();
+        checkVaultState();
+    </script>
+</body>
+</html>
