@@ -7,9 +7,9 @@
     <style>
         body { font-family: system-ui, -apple-system, sans-serif; background-color: #f8fafc; color: #334155; margin: 0; padding: 0; min-height: 100vh; display: flex; flex-direction: column; }
         nav { background-color: #059669; padding: 16px; color: white; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-        .nav-container { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; items-center: center; }
+        .nav-container { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
         nav h1 { margin: 0; font-size: 20px; font-weight: bold; }
-        .lang-btn { background-color: #065f46; color: white; border: none; padding: 8px 16px; rounded-radius: 8px; font-weight: bold; cursor: pointer; border-radius: 6px; }
+        .lang-btn { background-color: #065f46; color: white; border: none; padding: 8px 16px; border-radius: 6px; font-weight: bold; cursor: pointer; }
         main { max-width: 1000px; margin: 24px auto; padding: 0 16px; flex-grow: 1; width: 100%; box-sizing: border-box; }
         .trust-box { background-color: white; border-left: 4px solid #10b981; padding: 20px; margin-bottom: 32px; border-radius: 0 12px 12px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.05); display: flex; justify-content: space-between; align-items: center; gap: 16px; }
         .trust-box p { margin: 0; font-weight: 500; color: #064e3b; }
@@ -19,12 +19,13 @@
         .card { background-color: white; padding: 24px; border-radius: 16px; border: 1px solid #f1f5f9; box-shadow: 0 1px 3px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between; }
         .card h3 { margin: 0 0 8px 0; color: #0f172a; font-size: 18px; }
         .card p { margin: 0 0 16px 0; color: #64748b; font-size: 14px; }
-        input { w-index: 100%; border: 1px solid #e2e8f0; padding: 10px; border-radius: 8px; font-size: 14px; margin-bottom: 8px; box-sizing: border-box; }
-        .action-btn { w-index: 100%; background-color: #10b981; color: white; border: none; padding: 10px; border-radius: 8px; font-weight: 500; cursor: pointer; font-size: 14px; margin-top: 8px; }
+        input { width: 100%; border: 1px solid #e2e8f0; padding: 10px; border-radius: 8px; font-size: 14px; margin-bottom: 8px; box-sizing: border-box; }
+        .action-btn { width: 100%; background-color: #10b981; color: white; border: none; padding: 10px; border-radius: 8px; font-weight: 500; cursor: pointer; font-size: 14px; margin-top: 8px; }
         .call-btn { background-color: #0f172a; }
         footer { background-color: #0f172a; color: #94a3b8; font-size: 12px; padding: 16px 0; text-align: center; margin-top: 48px; }
         .status-active { color: #34d399; font-family: monospace; font-weight: bold; }
         .status-sleep { color: #f59e0b; font-family: monospace; font-weight: bold; }
+        .legal-btn { background: none; border: none; color: #64748b; font-size: 12px; cursor: pointer; text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -47,6 +48,7 @@
 
         <div id="vault-content" class="grid-container">
             
+            <!-- Tool 1: Resizer -->
             <div class="card">
                 <div>
                     <h3>📄 <span id="t1-title">Govt Exam PDF Resizer</span></h3>
@@ -58,6 +60,7 @@
                 </div>
             </div>
 
+            <!-- Tool 2: BioData -->
             <div class="card">
                 <div>
                     <h3>✍️ <span id="t2-title">Instant BioData Builder</span></h3>
@@ -69,6 +72,7 @@
                 </div>
             </div>
 
+            <!-- Tool 3: Tax Calculator -->
             <div class="card">
                 <div>
                     <h3>🧮 <span id="t3-title">Indian Tax Calculator</span></h3>
@@ -80,6 +84,7 @@
                 </div>
             </div>
 
+            <!-- Tool 4: VoIP Internet Call -->
             <div class="card">
                 <div>
                     <h3>📞 <span id="t4-title">Free Browser Web-Call</span></h3>
@@ -91,6 +96,22 @@
                 </div>
             </div>
 
+        </div>
+
+        <!-- LEGAL COMPLIANCE & PRIVACY NODES -->
+        <div style="margin-top: 40px; padding-top: 16px; border-top: 1px solid #e2e8f0; text-align: center; gap: 12px; display: flex; justify-content: center; flex-wrap: wrap;">
+            <button onclick="openLegalModal('privacy')" class="legal-btn">Privacy Policy</button>
+            <button onclick="openLegalModal('terms')" class="legal-btn">Terms of Service</button>
+            <button onclick="openLegalModal('safety')" class="legal-btn">Data Safety Declaration</button>
+        </div>
+
+        <!-- LEGAL DYNAMIC INTERACTION DIALOG SYSTEM -->
+        <div id="legal-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.6); z-index: 9999; justify-content: center; align-items: center; padding: 16px; box-sizing: border-box;">
+            <div style="background: white; max-width: 500px; width: 100%; padding: 24px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); max-height: 80vh; overflow-y: auto; position: relative;">
+                <h3 id="modal-title" style="margin: 0 0 12px 0; color: #0f172a; font-size: 18px; font-weight: bold;">Policy Document</h3>
+                <div id="modal-body" style="font-size: 13px; color: #475569; line-height: 1.6; text-align: justify; margin-bottom: 20px;"></div>
+                <button onclick="closeLegalModal()" style="width: 100%; background-color: #0f172a; color: white; border: none; padding: 10px; border-radius: 8px; font-weight: bold; cursor: pointer;">Acknowledge & Close</button>
+            </div>
         </div>
     </main>
 
@@ -127,35 +148,3 @@
                 t3Desc: "ইনকাম ট্যাক্স এবং স্থানীয় সুদের হিসাব দ্রুত বের করুন।",
                 t4Title: "Free Browser Web-Call",
                 t4Desc: "ইন্টারনেট ডেটা ব্যবহার করে ভারতে যেকোনো নম্বরে ২ মিনিটের ফ্রি কল করুন।",
-                speechText: "নমস্কার বন্ধু! আপনার ফাইলটি সম্পূর্ণ সুরক্ষিতভাবে তৈরি করা হয়েছে। এটি বিনামূল্যে ডাউনলোড করার জন্য অনুগ্রহ করে পরবর্তী শেয়ার অপশনটি ব্যবহার করে আপনার বন্ধুদের সাথে লিংকটি শেয়ার করুন। ধন্যবাদ।",
-                alertMsg: "সুরক্ষিত প্রসেসিং সেশন অ্যাক্টিভ হয়েছে। ফাইলটি সেভ করতে পরবর্তী প্রম্পটটি সম্পন্ন করুন।"
-            }
-        };
-
-        let currentLang = 'bn';
-        let VAULT_STATUS = "RUN"; 
-
-        function checkVaultState() {
-            if (VAULT_STATUS === "SLEEP") {
-                document.getElementById('vault-content').innerHTML = `
-                    <div style="max-width: 400px; margin: 48px auto; background: white; border: 1px solid #e2e8f0; padding: 32px; border-radius: 16px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-                        <div style="font-size: 40px; margin-bottom: 16px;">💤</div>
-                        <h2 style="margin: 0 0 8px 0; color: #1e293b;">Vault Optimization Active</h2>
-                        <p style="margin: 0; font-size: 14px; color: #64748b;">Structural systems optimized. Returning active in next period.</p>
-                        <p style="margin: 16px 0 0 0; font-size: 12px; color: #10b981; font-family: monospace;">● Mode: Hibernated (Safe)</p>
-                    </div>
-                `;
-                document.getElementById('vault-status-badge').innerText = "HIBERNATED";
-                document.getElementById('vault-status-badge').className = "status-sleep";
-            }
-        }
-
-        function toggleLanguage() {
-            currentLang = currentLang === 'en' ? 'bn' : 'en';
-            renderLocalization();
-        }
-
-        function renderLocalization() {
-            if (VAULT_STATUS === "SLEEP") return;
-            const data = localizationData[currentLang];
-            document.getElementById('nav-title').innerText = data.nav;
