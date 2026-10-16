@@ -37,26 +37,28 @@
         </div>
     </div>
 
-    <!-- DUAL PAYMENT GATEWAY PORTAL -->
+        <!-- DUAL PAYMENT GATEWAY PORTAL (UPDATED CONFIGURATION) -->
     <div id="premium-gateway" class="gateway-portal">
         <h3 style="color:white; margin-bottom:5px; font-family:sans-serif;">🔒 Premium Vault Unlock Infrastructure</h3>
         <p style="color:#94a3b8; font-size:0.9rem; font-family:sans-serif;">Direct client-side settlement loop bypassing aggregator merchant walls</p>
         <div class="payment-flex">
-            <!-- Domestic India UPI Link Route -->
+            <!-- Domestic India Route -->
             <div class="pay-card">
-                <h4 style="margin-bottom:5px;">🇮🇳 Indian Domestic Route</h4>
-                <p style="font-size:0.85rem; color:#94a3b8;">Flat ₹85/Year License Unlock</p>
+                <h4 style="margin-bottom:5px; color:#10b981;">🇮🇳 Indian Domestic Route</h4>
+                <p style="font-size:0.85rem; color:#94a3b8; margin-bottom:15px;">Flat ₹85/Year License Unlock</p>
                 <a href="upi://pay?pa=diptobhattacharyya@okaxis&pn=Dipto%20Bhattacharyya&am=85.00&cu=INR&tn=Ur-DailyCatchAllDrawer%20Premium" class="upi-link-btn">⚡ Pay via Local UPI App</a>
             </div>
-            <!-- Global PayPal System Target -->
-            <div class="pay-card">
-                <h4 style="margin-bottom:10px;">🌐 International Strategy</h4>
-                <p style="font-size:0.85rem; color:#94a3b8; margin-bottom:10px;">Flat $1.00 USD Global Clearance</p>
-                <div id="paypal-button-container"></div>
+            <!-- Global PayPal System Target with Hardened Element Bounds -->
+            <div class="pay-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                <h4 style="margin-bottom:5px; color:#3b82f6;">🌐 International Strategy</h4>
+                <p style="font-size:0.85rem; color:#94a3b8; margin-bottom:15px;">Flat $1.00 USD Global Clearance</p>
+                <!-- Added a minimum height and layout container target to let the SDK load safely -->
+                <div id="paypal-button-container" style="min-height: 45px; width: 100%; margin-top: auto;"></div>
             </div>
         </div>
-        <button style="margin-top:15px; background:transparent; border:none; color:#94a3b8; cursor:pointer; text-decoration:underline; font-family:sans-serif;" onclick="closePaymentPortal()">Close Window</button>
+        <button style="margin-top:20px; background:transparent; border:none; color:#94a3b8; cursor:pointer; text-decoration:underline; font-family:sans-serif;" onclick="closePaymentPortal()">Close Window</button>
     </div>
+
 
     <!-- MAIN APP WING WRAPPER FRAME START -->
     <div id="core-utilities-wing" class="container" style="display: block; padding: 20px;">
