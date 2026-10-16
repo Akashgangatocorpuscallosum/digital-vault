@@ -1,28 +1,156 @@
-body { font-family: system-ui, -apple-system, sans-serif; background-color: #f8fafc; color: #334155; margin: 0; padding: 0; min-height: 100vh; display: flex; flex-direction: column; }
-nav { background-color: #059669; padding: 16px; color: white; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.nav-container { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-nav h1 { margin: 0; font-size: 20px; font-weight: bold; }
-.lang-grid { display: flex; flex-wrap: wrap; gap: 4px; justify-content: flex-end; max-width: 60%; margin-bottom: 8px; }
-.lang-btn { background-color: #065f46; color: white; border: none; padding: 6px 10px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 11px; transition: background 0.2s; }
-.lang-btn:hover { background-color: #044e39; }
-.auth-btn { background-color: #0f172a; color: white; border: none; padding: 8px 14px; border-radius: 8px; font-size: 12px; font-weight: bold; cursor: pointer; transition: background 0.2s; }
-.auth-btn:hover { background-color: #1e293b; }
-main { max-width: 1000px; margin: 24px auto; padding: 0 16px; flex-grow: 1; width: 100%; box-sizing: border-box; }
-.trust-box { background-color: white; border-left: 4px solid #10b981; padding: 20px; margin-bottom: 32px; border-radius: 0 12px 12px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.05); display: flex; justify-content: space-between; align-items: center; gap: 16px; }
-.trust-box p { margin: 0; font-weight: 500; color: #064e3b; }
-.audio-btn { background-color: #10b981; color: white; border: none; padding: 10px 20px; border-radius: 50px; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 8px; shrink: 0; }
-.grid-container { display: grid; grid-template-columns: 1fr; gap: 24px; }
-@media (min-width: 768px) { .grid-container { grid-template-columns: 1fr 1fr; } }
-.card { background-color: white; padding: 24px; border-radius: 16px; border: 1px solid #f1f5f9; box-shadow: 0 1px 3px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between; position: relative; }
-.premium-badge { position: absolute; top: 16px; right: 16px; background-color: #f59e0b; color: white; font-size: 10px; font-weight: bold; padding: 2px 8px; border-radius: 20px; }
-input, select, textarea { width: 100%; border: 1px solid #e2e8f0; padding: 10px; border-radius: 8px; font-size: 14px; margin-bottom: 8px; box-sizing: border-box; font-family: inherit; }
-textarea { height: 60px; resize: none; }
-.action-btn { width: 100%; background-color: #10b981; color: white; border: none; padding: 10px; border-radius: 8px; font-weight: 500; cursor: pointer; font-size: 14px; margin-top: 8px; }
-.call-btn { background-color: #0f172a; }
-footer { background-color: #0f172a; color: #94a3b8; font-size: 12px; padding: 16px 0; text-align: center; margin-top: 48px; }
-.status-active { color: #34d399; font-family: monospace; font-weight: bold; }
-.status-sleep { color: #f59e0b; font-family: monospace; font-weight: bold; }
-.legal-btn { background: none; border: none; color: #64748b; font-size: 12px; cursor: pointer; text-decoration: underline; }
-.fallback-ad-frame { width: 100%; max-width: 728px; background: linear-gradient(135deg, #e0f2fe, #f0fdf4); border: 2px dashed #10b981; padding: 20px; border-radius: 12px; text-align: center; box-sizing: border-box; }
-.modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.6); z-index: 9999; justify-content: center; align-items: center; padding: 16px; box-sizing: border-box; }
-.modal-card { background: white; max-width: 450px; width: 100%; padding: 24px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+/* ======================================================================
+   UR-DAILYCATCHALLDRAWER PRO - UNIFIED PRODUCTION STYLESHEET
+   ====================================================================== */
+
+:root {
+    --bg-dark: #0f172a;
+    --card-bg: #1e293b;
+    --accent-blue: #3b82f6;
+    --accent-green: #10b981;
+    --accent-purple: #8b5cf6;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-color: #334155;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding-bottom: 40px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Tab Management Buttons System */
+.wing-switcher {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.switch-btn {
+    padding: 12px 24px;
+    border: 2px solid var(--accent-green);
+    background: transparent;
+    color: var(--accent-green);
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.switch-btn.active {
+    background: var(--accent-green);
+    color: white;
+}
+
+/* Premium Layout Core Display */
+.gateway-portal {
+    background: var(--card-bg);
+    border: 2px solid var(--accent-purple);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    display: none;
+    text-align: center;
+}
+
+.payment-flex {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.pay-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 250px;
+    color: white;
+}
+
+.upi-link-btn {
+    display: inline-block;
+    background: var(--accent-green);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.upi-link-btn:hover {
+    background: #059669;
+}
+
+/* Universal Action Buttons Layouts */
+.action-btn {
+    width: 100%;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: opacity 0.2s;
+}
+
+.action-btn:hover {
+    opacity: 0.9;
+}
+
+/* Isolated Grid Output Display Elements */
+.result-box {
+    margin-top: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+/* Multi-Stream Embedded UI Node Controllers */
+.audio-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.audio-btn {
+    flex: 1;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.play-btn { background-color: var(--accent-green); color: white; }
+.stop-btn { background-color: #ef4444; color: white; }
+
+/* Global Optimization Telemetry Adjustments */
+@media (max-width: 768px) {
+    .payment-flex { flex-direction: column; }
+    body { padding: 10px; }
+}
