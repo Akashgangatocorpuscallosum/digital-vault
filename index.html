@@ -138,18 +138,27 @@
          ========================================================================= -->
     <div class="app-container">
         
-        <!-- Application Top Navigation & Premium Gate Trigger -->
+               <!-- =========================================================================
+             CORRECTED APPLICATION SHELL HEADER & LOGO ALIGNMENT BLOCK
+             ========================================================================= -->
         <header class="app-header">
             <div class="header-logo-group">
                 <span class="app-icon">📁</span>
                 <h1>Ur-DailyCatchAllDrawer <span class="badge-pro">PRO</span></h1>
             </div>
+            
+            <!-- Placed active monetization anchor outside the hidden overlay frame -->
+            <div class="header-ads-inline">
+                <div id="container-deae20f818ff82001ccc66d0597c26c9"></div>
+            </div>
+
             <nav class="header-actions">
                 <button class="unlock-trigger-btn" onclick="toggleVaultModal(true)">
                     🔒 Premium Vault Unlock
                 </button>
             </nav>
         </header>
+
 
         <!-- Dynamic User Status Overview Bar -->
         <div class="user-status-strip">
@@ -835,6 +844,20 @@
         function triggerNomadStreamDeck() {
             alert("Ambient workspace concentration background audio track initiated.");
         }
+            // =========================================================================
+        // ADSTERRA LIVE NATIVE CONTAINER RENDERING LOOP AUTOMATION
+        // =========================================================================
+        window.addEventListener('DOMContentLoaded', () => {
+            const nativeAdTargetNode = document.getElementById('container-deae20f818ff82001ccc66d0597c26c9');
+            if (nativeAdTargetNode && !nativeAdTargetNode.hasChildNodes()) {
+                // Dynamically inject the Adsterra Engine network script into the unblocked container layout
+                const adsterraAssetScript = document.createElement('script');
+                adsterraAssetScript.type = 'text/javascript';
+                adsterraAssetScript.src = '//bauval.org/21/deae20f818ff82001ccc66d0597c26c9';
+                nativeAdTargetNode.appendChild(adsterraAssetScript);
+            }
+        });
+
     </script>
 </body>
 </html>
