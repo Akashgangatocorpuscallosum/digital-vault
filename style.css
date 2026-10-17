@@ -481,3 +481,30 @@ body {
 .tool-controls-row { display: flex; gap: 16px; margin-bottom: 16px; }
 .control-group { flex: 1; display: flex; flex-direction: column; gap: 4px; }
 .control-group label { font-size: 0.8rem; color: var(--text-secondary); }
+/* =========================================================================
+   FINAL PRODUCTION PRESENTATION ALIGNMENT FIXES
+   ========================================================================= */
+
+/* Hides the dynamic script-injected text from the top margin completely */
+body > div[style*="position: absolute"]:not(.vault-modal-overlay), 
+body > p[style*="position: absolute"],
+.app-header + div[style*="position: absolute"] {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+/* Adjusts the flex container layout to make the header button align straight */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Aligns all text, banners, and buttons in a clean row */
+    padding: 15px 0;
+    gap: 20px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
