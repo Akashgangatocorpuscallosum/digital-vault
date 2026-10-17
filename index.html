@@ -848,6 +848,25 @@
         function triggerNomadStreamDeck() {
             alert("Ambient workspace concentration background audio track initiated.");
         }
+                // =========================================================================
+        // DYNAMIC TRAFFIC LEDGER ANTI-OVERLAP PURGE LOOP
+        // =========================================================================
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const globalViewportElements = document.querySelectorAll('body *, body div, body p');
+                globalViewportElements.forEach(node => {
+                    if (node.textContent && node.textContent.includes('© 2026 Ur-DailyCatchAllDrawer PRO')) {
+                        // Avoid deleting the valid bottom footer element
+                        if (!node.classList.contains('app-footer-brand') && !node.closest('.app-footer-brand')) {
+                            node.style.display = 'none';
+                            node.style.opacity = '0';
+                            node.style.setProperty('visibility', 'hidden', 'important');
+                        }
+                    }
+                });
+            }, 600); // 600ms execution delay to capture late script injections
+        });
+
         </script>
                 <!-- =========================================================================
          MONETIZATION ENGINE: Synchronized Vercel Native Banner Script Execution
