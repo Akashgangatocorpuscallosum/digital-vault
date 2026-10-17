@@ -482,17 +482,26 @@ body {
 .control-group { flex: 1; display: flex; flex-direction: column; gap: 4px; }
 .control-group label { font-size: 0.8rem; color: var(--text-secondary); }
 /* =========================================================================
-   FINAL PRODUCTION PRESENTATION ALIGNMENT FIXES
+   FINAL PRODUCTION PRESENTATION ALIGNMENT & HIDDEN TEXT PURGE FIXES
    ========================================================================= */
 
-/* Hides the dynamic script-injected text from the top margin completely */
+/* Absolute brute-force erasure targeting dynamic text container injections */
 body > div[style*="position: absolute"]:not(.vault-modal-overlay), 
 body > p[style*="position: absolute"],
-.app-header + div[style*="position: absolute"] {
+.app-header + div[style*="position: absolute"],
+body > div[style*="z-index"]:not(.vault-modal-overlay),
+body > p:first-of-type {
     display: none !important;
     opacity: 0 !important;
     visibility: hidden !important;
     pointer-events: none !important;
+    height: 0 !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: fixed !important;
+    left: -9999px !important;
+    top: -9999px !important;
 }
 
 /* Adjusts the flex container layout to make the header button align straight */
