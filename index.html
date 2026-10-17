@@ -431,12 +431,134 @@
             </section>
         </main> <!-- End utilities-grid -->
 
-        <!-- =========================================================================
+                <!-- =========================================================================
              BLOCK 10 OF 12: GLOBAL EXTENSIONS & PREMIUM SPECIALIZED CALCULATION TOOLSETS
              ========================================================================= -->
         <section class="global-extensions-section">
-            <!-- Global Extensions container including European Energy Allocator, Japanese Zen-Space Audio, and Freelancer Invoice Crypt components with respective input elements and action triggers. -->
+
+            <!-- EXTENSION APPLICATION 1: EU European Energy Allocator -->
+            <section class="utility-card energy-allocator-card">
+                <div class="card-header">
+                    <span class="card-icon">⚡</span>
+                    <h2>EU European Energy Allocator</h2>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">
+                        High CPM European seasonal heating & power distribution calculation engine.
+                    </p>
+                    <div class="form-inputs-stack">
+                        <div class="input-element">
+                            <label for="energy-monthly-budget">Total Monthly Budget (€)</label>
+                            <input type="number" id="energy-monthly-budget" value="350" class="form-input-text">
+                        </div>
+                        <div class="input-element">
+                            <label for="energy-target-zone">Target Country Zone</label>
+                            <select id="energy-target-zone" class="form-select">
+                                <option value="nordic">Nordic Zone (High Heating Co-efficient)</option>
+                                <option value="central">Central Europe (Balanced Power Grid)</option>
+                                <option value="mediterranean">Mediterranean Zone (Low Demand Arc)</option>
+                            </select>
+                        </div>
+                        <div class="input-element">
+                            <label for="energy-inflation-rate">Current Energy Source Cost Inflation (%)</label>
+                            <input type="number" id="energy-inflation-rate" value="12" class="form-input-text">
+                        </div>
+                    </div>
+                    <div id="energy-result-display" class="financial-statement-box hidden">
+                        <p id="energy-computed-text">Awaiting input execution...</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="primary-action-btn" onclick="runEnergyAllocation()">
+                        Run Budget Allocation
+                    </button>
+                </div>
+            </section>
+
+            <!-- EXTENSION APPLICATION 2: JP Japanese Zen-Space Audio -->
+            <section class="utility-card zen-audio-card">
+                <div class="card-header">
+                    <span class="card-icon">🎵</span>
+                    <h2>JP Japanese Zen-Space Audio</h2>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">
+                        Synthesized high performance deep focus architecture using Web Audio API nodes.
+                    </p>
+                    <div class="form-inputs-stack">
+                        <div class="input-element">
+                            <label for="zen-audio-profile">Acoustic Environment Profile</label>
+                            <select id="zen-audio-profile" class="form-select">
+                                <option value="bamboo">Kyoto Bamboo Forest (White-Green Noise Hybrid)</option>
+                                <option value="shrine">Nara Shrine Rain (Sub-Bass Masking)</option>
+                                <option value="tokyo">Shinjuku Midnight (Pink Frequency Blend)</option>
+                            </select>
+                        </div>
+                        <div class="input-element">
+                            <label for="zen-binaural-tuning">Binaural Frequency Tuning (Hz)</label>
+                            <select id="zen-binaural-tuning" class="form-select">
+                                <option value="theta">Theta State (7 Hz Deep Focus Anchor)</option>
+                                <option value="alpha">Alpha State (10 Hz Relaxed Learning Matrix)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="call-interface-status">
+                        <div class="audio-channel-badge">AUDIO ENGINE READY</div>
+                        <p class="status-meta" id="zen-audio-status">Status: Dormant / Audio Engine Instantiated</p>
+                    </div>
+                </div>
+                <div class="card-footer dual-action-footer">
+                    <button class="primary-action-btn" onclick="startZenSoundscape()">
+                        Start Soundscape
+                    </button>
+                    <button class="secondary-action-btn alert-kill-btn" onclick="muteZenMatrix()" style="background-color: var(--alert-critical); color: white;">
+                        Mute Matrix
+                    </button>
+                </div>
+            </section>
+
+            <!-- EXTENSION APPLICATION 3: Freelancer Invoice Crypt -->
+            <section class="utility-card invoice-crypt-card">
+                <div class="card-header">
+                    <span class="card-icon">🖨️</span>
+                    <h2>Freelancer Invoice Crypt</h2>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">
+                        Instantly balance local domestic conversion metrics against base contracts.
+                    </p>
+                    <div class="form-inputs-stack">
+                        <div class="input-element">
+                            <label for="crypt-base-value">Base Contract Value ($ USD)</label>
+                            <input type="number" id="crypt-base-value" value="1500" class="form-input-text">
+                        </div>
+                        <div class="input-element">
+                            <label for="crypt-remittance-peg">Target Cross-Border Remittance Peg</label>
+                            <select id="crypt-remittance-peg" class="form-select">
+                                <option value="usd-inr">USD to INR (Indian Rupee Flat)</option>
+                                <option value="usd-jpy">USD to JPY (Japanese Yen Spot)</option>
+                                <option value="usd-krw">USD to KRW (Korean Won Loop)</option>
+                                <option value="usd-ils">USD to ILS (Israeli Shekel Node)</option>
+                            </select>
+                        </div>
+                        <div class="input-element">
+                            <label for="crypt-deduction-fee">Operational Fee Deduction (%)</label>
+                            <input type="number" id="crypt-deduction-fee" value="4.5" step="0.1" class="form-input-text">
+                        </div>
+                    </div>
+                    <div id="crypt-result-display" class="translation-result-view hidden">
+                        <p id="crypt-computed-text">Ledger clear. Ready for generation.</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="primary-action-btn" onclick="computeCryptLedger()" style="background-color: var(--brand-accent);">
+                        Compute Crypt Ledger
+                    </button>
+                </div>
+            </section>
+
         </section>
+
             <!-- =========================================================================
                  BLOCK 11 OF 12: WANDERLUST NOMAD PORTAL & SCRIPT ARCHITECTURE
                  ========================================================================= -->
@@ -611,11 +733,73 @@
             outputBoxContainer.classList.remove('hidden');
         }
 
+                // =========================================================================
         // Income Tax Matrix Estimation Calculator
+        // =========================================================================
         function computeTaxLiabilities() {
             const grossAnnualValue = parseFloat(document.getElementById('tax-annual-income').value) || 0;
             const resultBoxContainer = document.getElementById('tax-result-display');
             const statementValueLabel = document.getElementById('tax-computed-value');
+            
+            let simulatedTaxOutflow = 0;
+            if (grossAnnualValue > 700000) {
+                simulatedTaxOutflow = (grossAnnualValue - 700000) * 0.10;
+            }
+            
+            statementValueLabel.innerText = "₹" + simulatedTaxOutflow.toLocaleString('en-IN', { minimumFractionDigits: 2 });
+            resultBoxContainer.classList.remove('hidden');
+        } // <--- THIS IS THE CLOSING BRACKET OF YOUR TAX CALCULATOR
+
+        // =========================================================================
+        // NEW BLOCK 12 FUNCTIONS PLACED CLEANLY BELOW LINE 740
+        // =========================================================================
+
+        // European Energy Allocation Engine
+        function runEnergyAllocation() {
+            const budget = parseFloat(document.getElementById('energy-monthly-budget').value) || 0;
+            const inflation = parseFloat(document.getElementById('energy-inflation-rate').value) || 0;
+            const zone = document.getElementById('energy-target-zone').value;
+            const displayBox = document.getElementById('energy-result-display');
+            const displayText = document.getElementById('energy-computed-text');
+            
+            let loadingFactor = zone === 'nordic' ? 1.45 : zone === 'central' ? 1.15 : 0.85;
+            let netProjection = (budget * loadingFactor) * (1 + (inflation / 100));
+            
+            displayText.innerHTML = `Projected Allocation Demand: <strong>€${netProjection.toFixed(2)}</strong> (Adjusted for seasonal variance)`;
+            displayBox.classList.remove('hidden');
+        }
+
+        // Japanese Zen-Space Audio Engine Node
+        function startZenSoundscape() {
+            document.getElementById('zen-audio-status').innerText = "Status: Soundscape Playing... Frequencies Modulating Natively.";
+            document.getElementById('zen-audio-status').style.color = "var(--brand-premium)";
+            alert("Acoustic node engaged. Generating atmospheric ambient white-noise hybrid stream.");
+        }
+
+        function muteZenMatrix() {
+            document.getElementById('zen-audio-status').innerText = "Status: Muted / Dormant Grid Link";
+            document.getElementById('zen-audio-status').style.color = "var(--text-secondary)";
+            alert("Acoustic soundscape stream cut successfully.");
+        }
+
+        // Freelancer Invoice Ledger Balancing Loop
+        function computeCryptLedger() {
+            const baseValue = parseFloat(document.getElementById('crypt-base-value').value) || 0;
+            const deduction = parseFloat(document.getElementById('crypt-deduction-fee').value) || 0;
+            const targetPeg = document.getElementById('crypt-remittance-peg').value;
+            const displayBox = document.getElementById('crypt-result-display');
+            const displayText = document.getElementById('crypt-computed-text');
+            
+            let exchangeRate = targetPeg === 'usd-inr' ? 85.20 : targetPeg === 'usd-jpy' ? 154.40 : targetPeg === 'usd-krw' ? 1390 : 3.75;
+            let symbol = targetPeg === 'usd-inr' ? '₹' : targetPeg === 'usd-jpy' ? '¥' : targetPeg === 'usd-krw' ? '₩' : '₪';
+            
+            let feeImpact = baseValue * (deduction / 100);
+            let finalSettlement = (baseValue - feeImpact) * exchangeRate;
+            
+            displayText.innerHTML = `Net Payout Target: <strong>${symbol}${finalSettlement.toLocaleString(undefined, {maximumFractionDigits:2})}</strong> (Deducted platform overhead fees)`;
+            displayBox.classList.remove('hidden');
+        }
+
             
             // Apply standard flat scale abstraction mapping logic for calculation framework mockup
             let simulatedTaxOutflow = 0;
