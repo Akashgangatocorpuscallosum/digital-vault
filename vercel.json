@@ -1,23 +1,7 @@
----
-
-### Part 2: Deployment Infrastructure Configuration (`vercel.json`)
-To fully address the custom domain failure (`www.ur-dailycatchalldrawer.com` failing to load while your Vercel URL runs flawlessly), create a file named exactly **`vercel.json`** in the root directory alongside `index.html`. 
-
-Add this code snippet to handle structural asset distribution and configure automated apex redirects cleanly:
-
-```json
 {
   "version": 2,
-  "public": true,
   "cleanUrls": true,
   "trailingSlash": false,
-  "redirects": [
-    {
-      "source": "/index.html",
-      "destination": "/",
-      "permanent": true
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
