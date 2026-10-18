@@ -15,6 +15,36 @@
     
     <!-- Open Source Serverless Signaling Library Allocation Vector -->
     <script src="https://unpkg.com"></script>
+
+    <!-- INJECTED MASTER STYLING ENGINE START -->
+    <script src="https://tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dashboardBg: '#0f172a',
+                        cardBg: '#1e293b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .ad-glow-matrix {
+            background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+            background-size: 200% 100%;
+            animation: matrixGlow 1.5s infinite;
+        }
+        @keyframes matrixGlow {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+    </style>
+    <!-- INJECTED MASTER STYLING ENGINE END -->
+</head>
+<body class="bg-[#0f172a] text-slate-100 min-h-screen font-sans antialiased">
+
 </head>
 <body>
     <!-- =========================================================================
@@ -4025,10 +4055,10 @@
 <div id="secure-key-container" class="utility-card p-6 bg-white rounded-xl shadow-md border border-gray-200 native-sandbox my-4">
     <div class="flex items-center space-x-3 mb-4">
         <div class="p-2 bg-violet-100 text-violet-600 rounded-lg">
-            <svg xmlns="http://w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
-            </svg>
-        </div>
+     <svg xmlns="http://w3.org" class="w-6 h-6 text-violet-600 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+    </svg>
+</div>
         <div>
             <h3 class="text-lg font-bold text-gray-900 tracking-tight">Secure Token Crypt Generator</h3>
             <p class="text-xs text-gray-500 font-medium">Hardware-Backed CSPRNG Stream & Entropy Bit Evaluation</p>
@@ -4455,7 +4485,7 @@
 <div id="morse-synthesizer-container" class="utility-card p-6 bg-white rounded-xl shadow-md border border-gray-200 native-sandbox my-4">
     <div class="flex items-center space-x-3 mb-4">
         <div class="p-2 bg-amber-100 text-amber-600 rounded-lg">
-            <svg xmlns="http://w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://w3.org" class="w-6 h-6 text-indigo-600 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
             </svg>
         </div>
