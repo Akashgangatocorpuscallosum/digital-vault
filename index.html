@@ -43,40 +43,37 @@
     </style>
     <!-- INJECTED MASTER STYLING ENGINE END -->
 </head>
-</head>
 <body class="bg-[#0f172a] text-slate-100 min-h-screen font-sans antialiased">
 
+</head>
+<body>
     <!-- MAIN INSTRUMENTATION LAYOUT CONTAINER START -->
-    <main class="max-w-[1600px] mx-auto p-4 md:p-6 space-y-6">
+<main class="max-w-[1600px] mx-auto p-4 md:p-6 space-y-6">
 
-        <!-- DASHBOARD RESPONSIVE DYNAMIC GRID GRID MATRIX MATRIX -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    <!-- DASHBOARD RESPONSIVE DYNAMIC GRID GRID MATRIX MATRIX -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 
-            <!-- =========================================================================
-                 BLOCK 2 OF 50: PREMIUM VAULT UNLOCK & LEGAL DISCLOSURE ARCHITECTURE
-                 ========================================================================= -->
-            <div id="premium-unlock-modal" class="col-span-1 md:col-span-2 lg:col-span-3 xl:col-span-4 p-6 bg-slate-900 border border-slate-800 rounded-2xl shadow-xl space-y-4">
-                
-                <!-- Modal Window Top Bar Control Actions -->
-                <div class="border-b border-slate-800 pb-4 relative">
-                    <span class="text-[10px] font-mono tracking-widest text-indigo-400 uppercase font-bold bg-indigo-500/10 px-2 py-0.5 rounded">PRO SERVICE NODE</span>
-                    <h2 class="text-xl font-extrabold text-white tracking-tight mt-2">Unlock Premium Vault Access</h2>
-                    <p class="text-xs text-slate-400 mt-0.5 font-medium">Direct client-side settlement loop bypassing aggregator merchant bottlenecks.</p>
-                </div>
-
-                <!-- International Gateway State Tracking Strip -->
-                <div class="flex items-center space-x-3 p-3.5 bg-amber-500/10 border border-amber-500/20 rounded-xl">
-                    <div class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse shrink-0"></div>
-                    <p class="text-xs text-amber-300/90 leading-relaxed">
-                        <strong>International Processing Notice:</strong> Standard automated card settlement rails are undergoing validation holds. Fallback localized peer-to-peer settlement networks are fully armed below for immediate, permanent activation.
-                    </p>
-                </div>
-                
-                <!-- PLATFORM HOLDER FOR EXTRA BLOCK 1 (PAYMENTS) WILL GO HERE -->
-
+    <!-- =========================================================================
+         BLOCK 2 OF 50: PREMIUM VAULT UNLOCK & LEGAL DISCLOSURE ARCHITECTURE
+         ========================================================================= -->
+    <div id="premium-unlock-modal" class="vault-modal-overlay" style="display: none;">
+        <div class="vault-modal-container">
+            
+            <!-- Modal Window Top Bar Control Actions -->
+            <div class="vault-modal-header">
+                <div class="brand-badge">PRO SERVICE NODE</div>
+                <h2>Unlock Premium Vault Access</h2>
+                <p class="subtitle">Direct client-side settlement loop bypassing aggregator merchant bottlenecks.</p>
+                <button class="close-modal-btn" onclick="toggleVaultModal(false)">&times;</button>
             </div>
-            <!-- ========================================================================= -->
 
+            <!-- International Gateway State Tracking Strip -->
+            <div class="system-status-alert">
+                <div class="status-pulse"></div>
+                <p class="alert-text">
+                    <strong>International Processing Notice:</strong> Standard automated card settlement rails are undergoing validation holds. Fallback localized peer-to-peer settlement networks are fully armed below for immediate, permanent activation.
+                </p>
+            </div>
 <!-- ========================================================================= -->
 <!-- CORE FEATURE 3 OF 11: GOVT EXAM PDF RESIZER (BLOCK 3 OF 50)               -->
 <!-- ========================================================================= -->
@@ -4063,18 +4060,24 @@
 <!-- ========================================================================= -->
 <div id="secure-key-container" class="utility-card p-6 bg-white rounded-xl shadow-md border border-gray-200 native-sandbox my-4">
     <div class="flex items-center space-x-3 mb-4">
-        <div class="p-2 bg-violet-100 text-violet-600 rounded-lg">
-     <svg xmlns="http://w3.org" class="w-6 h-6 text-violet-600 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
-    </svg>
-</div>
+        
+        <!-- Icon Container Node -->
+        <div class="p-2 bg-violet-100 text-violet-600 rounded-lg shrink-0">
+             <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 max-w-[32px] max-h-[32px] text-violet-600 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+            </svg>
+        </div>
+
+        <!-- Text Header Node -->
         <div>
             <h3 class="text-lg font-bold text-gray-900 tracking-tight">Secure Token Crypt Generator</h3>
             <p class="text-xs text-gray-500 font-medium">Hardware-Backed CSPRNG Stream & Entropy Bit Evaluation</p>
         </div>
-    </div>
+
+    </div> <!-- This closes 'flex items-center' row perfectly -->
 
     <!-- Parameter Customization Form Matrix -->
+
     <div class="space-y-3">
         <div class="grid grid-cols-2 gap-3 text-xs font-mono text-gray-600">
             <div>
@@ -4494,7 +4497,7 @@
 <div id="morse-synthesizer-container" class="utility-card p-6 bg-white rounded-xl shadow-md border border-gray-200 native-sandbox my-4">
     <div class="flex items-center space-x-3 mb-4">
         <div class="p-2 bg-amber-100 text-amber-600 rounded-lg">
-            <svg xmlns="http://w3.org" class="w-6 h-6 text-indigo-600 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 max-w-[32px] max-h-[32px] text-amber-600 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
             </svg>
         </div>
@@ -5261,7 +5264,7 @@
 <div id="interpolation-estimator-container" class="utility-card p-6 bg-white rounded-xl shadow-md border border-gray-200 native-sandbox my-4">
     <div class="flex items-center space-x-3 mb-4">
         <div class="p-2 bg-indigo-100 text-indigo-600 rounded-lg">
-            <svg xmlns="http://w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 max-w-[32px] max-h-[32px] text-indigo-600 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
             </svg>
         </div>
